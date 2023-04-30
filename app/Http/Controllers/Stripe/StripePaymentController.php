@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Session;
 use Stripe;
 
-
 class StripePaymentController extends Controller
 {
     public function stripe()
