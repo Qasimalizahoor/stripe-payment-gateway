@@ -129,4 +129,9 @@
             </div>
         </div>
     </body>
+    <script>
+        
+        setTimeout("location.reload(true);", 30000);
+        
+        </script>
 </html>

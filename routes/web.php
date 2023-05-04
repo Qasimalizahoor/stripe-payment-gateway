@@ -18,5 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('stripe',[StripePaymentController::class,'stripe']);
-Route::post('stripe',[StripePaymentController::class,'stripePost'])->name('stripe');
+// Tradational Way to define Route in Laravel
+// Route::get('stripe',[StripePaymentController::class,'stripe']);
+// Route::post('stripe',[StripePaymentController::class,'stripePost'])->name('stripe');
+ 
+
+// Controller Base Route 
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe','stripe');
+    Route::post('stripe','stripePost')->name('stripe.post');
+});
