@@ -109,31 +109,24 @@
 //   }
 // });
 
-const inputs = document.querySelectorAll('input');
-function handleInput(event) {
-  const input = event.target;
-  const maxLength = input.getAttribute('size');
-  const amount =  input.getAttribute('name') == "amount" ? false : true;
-  if (input.value.length >= maxLength && amount) {
-    input.disabled = true;
-  } else {
-    input.disabled = false;
-  }
-}
-inputs.forEach(input => {
-  input.addEventListener('input', handleInput);
-});
 
-$(document).ready(function(){
-    $('#cvc-input').dblclick(function(){
-  alert("hello");
-    debugger
-    const checkAttr = $('#cvc-input').is(':disabled'); // this should return true if input feild is disabled but not workign
+// This code will disabled input feild when it reach to size attribute code line 115-128
 
-    $('#cvc-input').prop('disabled', false);
+// const inputs = document.querySelectorAll('input');
+// function handleInput(event) {
+//   const input = event.target;
+//   const maxLength = input.getAttribute('size');
+//   const amount =  input.getAttribute('name') == "amount" ? false : true;
+//   if (input.value.length >= maxLength && amount) {
+//     input.disabled = true;
+//   } else {
+//     input.disabled = false;
+//   }
+// }
+// inputs.forEach(input => {
+//   input.addEventListener('input', handleInput);
+// });
 
-    });
-})
 
 
 const alert = document.querySelector('.close');
